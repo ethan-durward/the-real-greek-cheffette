@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Real Greek Cheffette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #FAFAF7;
+      --bg-alt:     #F3EFE6;
+      --white:      #FFFFFF;
+      --text:       #1A1A16;
+      --text-mid:   #4A4A42;
+      --text-light: #8A8A7E;
+      --accent:     #B07D4A;
+      --accent-h:   #8C6138;
+      --sage:       #6B7B68;
+      --border:     #E4DECE;
+      --shadow-sm:  0 1px 8px rgba(0,0,0,0.06);
+      --shadow-md:  0 4px 24px rgba(0,0,0,0.09);
+      --radius:     4px;
+      --nav-h:      72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(250,250,247,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      gap: 40px;
+    }
+
+    .nav-logo {
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      white-space: nowrap;
+      margin-right: auto;
+    }
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-search-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-mid);
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .nav-search-btn:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--text);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.42;
+      transform: scale(1.02);
+      transition: transform 8s ease;
+    }
+    .hero:hover .hero-bg { transform: scale(1.05); }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      padding: 60px 24px;
+      max-width: 800px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 9vw, 96px);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.02em;
+      margin-bottom: 44px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-search {
+      display: flex;
+      align-items: center;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 6px 6px 6px 24px;
+      max-width: 460px;
+      margin: 0 auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .hero-search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      background: transparent;
+    }
+    .hero-search input::placeholder { color: var(--text-light); }
+    .hero-search button {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      padding: 10px 22px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .hero-search button:hover { background: var(--accent-h); }
+
+    /* ── SECTION WRAPPER ── */
+    .section { padding: 80px 40px; max-width: 1280px; margin: 0 auto; }
+    .section-sm { padding: 60px 40px; max-width: 1280px; margin: 0 auto; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .section-title em { font-style: italic; }
+
+    .view-all {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .view-all:hover { gap: 10px; }
+
+    /* ── CATEGORIES ── */
+    .categories {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .cat-pill {
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .cat-pill:hover { border-color: var(--accent); color: var(--accent); }
+    .cat-pill.active {
+      background: var(--text);
+      border-color: var(--text);
+      color: var(--white);
+    }
+
+    /* ── RECIPE GRID ── */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .recipe-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .recipe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .recipe-card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-alt);
+    }
+
+    .recipe-card-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--bg-alt) 0%, var(--border) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    .recipe-card-body {
+      padding: 24px 24px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recipe-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .recipe-category {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    .recipe-featured-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: var(--white);
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+
+    .recipe-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 10px;
+      flex: 1;
+    }
+
+    .recipe-card-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .recipe-card-footer {
+      display: flex;
+      gap: 20px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+
+    .recipe-stat {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--text-light);
+    }
+    .recipe-stat svg { flex-shrink: 0; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--text-light);
+    }
+    .empty-state p { font-size: 16px; margin-top: 12px; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 40px;
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: var(--bg-alt);
+      padding: 80px 40px;
+    }
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      background: var(--border);
+    }
+    .about-img-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(160deg, #E8DDD0, #C8B89A);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 72px;
+    }
+    .about-accent-box {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 160px;
+      height: 160px;
+      background: var(--accent);
+      opacity: 0.12;
+      border-radius: 4px;
+      z-index: 0;
+    }
+    .about-text { position: relative; z-index: 1; }
+    .about-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .about-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .about-text h2 em { font-style: italic; }
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+    }
+    .about-text p:last-of-type { margin-bottom: 32px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 100px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-dark { background: var(--text); color: var(--white); }
+    .btn-dark:hover { background: var(--accent); }
+    .btn-outline { background: none; border: 1.5px solid var(--text); color: var(--text); }
+    .btn-outline:hover { background: var(--text); color: var(--white); }
+
+    /* ── INSTAGRAM STRIP ── */
+    .instagram-strip {
+      padding: 64px 40px;
+      text-align: center;
+    }
+    .instagram-strip .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    .instagram-strip h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    .instagram-strip a {
+      color: var(--accent);
+      text-decoration: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-style: italic;
+    }
+    .instagram-strip a:hover { text-decoration: underline; }
+    .instagram-strip p {
+      color: var(--text-light);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.6);
+      padding: 48px 40px;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+    .footer-logo span { color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a {
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 12px; }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(26,26,22,0.75);
+      backdrop-filter: blur(4px);
+      overflow-y: auto;
+      padding: 40px 24px;
+    }
+    .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+
+    .modal {
+      background: var(--white);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 860px;
+      overflow: hidden;
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 10;
+      background: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 100%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: background 0.2s;
+    }
+    .modal-close:hover { background: var(--bg-alt); }
+
+    .modal-hero-img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-alt);
+    }
+    .modal-hero-placeholder {
+      width: 100%;
+      height: 320px;
+      background: linear-gradient(135deg, var(--bg-alt), var(--border));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+
+    .modal-body { padding: 40px 48px 48px; }
+
+    .modal-category {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+
+    .modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .modal-stats {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+
+    .modal-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .modal-stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+    .modal-stat-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .modal-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      margin-bottom: 36px;
+    }
+
+    .modal-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 48px;
+    }
+
+    .modal-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .ingredients-list { list-style: none; }
+    .ingredients-list li {
+      font-size: 14px;
+      color: var(--text-mid);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .ingredients-list li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 300;
+    }
+
+    .instructions-list { list-style: none; counter-reset: step; }
+    .instructions-list li {
+      counter-increment: step;
+      font-size: 14px;
+      color: var(--text-mid);
+      padding: 14px 0 14px 48px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.7;
+      position: relative;
+    }
+    .instructions-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 28px;
+      height: 28px;
+      background: var(--text);
+      color: var(--white);
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    /* ── INSTAGRAM LINK ── */
+    .modal-instagram {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 40px;
+      padding: 20px 24px;
+      background: linear-gradient(135deg, #f9f0fb, #fce8f3);
+      border-radius: 8px;
+      border: 1px solid #f0d8ec;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .modal-instagram:hover { opacity: 0.85; }
+    .modal-instagram-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .modal-instagram-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .modal-instagram-text span {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* ── SEARCH OVERLAY ── */
+    .search-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 150;
+      background: rgba(250,250,247,0.97);
+      backdrop-filter: blur(8px);
+      align-items: flex-start;
+      justify-content: center;
+      padding: 120px 24px 40px;
+    }
+    .search-overlay.open { display: flex; }
+
+    .search-overlay-inner { width: 100%; max-width: 600px; }
+    .search-overlay-bar {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 12px;
+      margin-bottom: 40px;
+    }
+    .search-overlay-bar input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--text);
+    }
+    .search-overlay-bar input::placeholder { color: var(--border); }
+    .search-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.2s;
+    }
+    .search-close:hover { color: var(--accent); }
+
+    .search-results { display: flex; flex-direction: column; gap: 12px; }
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-result-item:hover { background: var(--bg-alt); }
+    .search-result-img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background: var(--bg-alt);
+    }
+    .search-result-img-ph {
+      width: 56px;
+      height: 56px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .search-result-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .search-result-cat {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-img-wrap { max-width: 360px; }
+      .modal-content-grid { grid-template-columns: 1fr; gap: 32px; }
+      .modal-body { padding: 28px 28px 40px; }
+    }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 20px; gap: 20px; }
+      .nav-links { display: none; }
+      .section, .section-sm { padding: 60px 20px; }
+      .about-section { padding: 60px 20px; }
+      .divider { margin: 0 20px; }
+      footer { padding: 40px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .recipe-grid { grid-template-columns: 1fr; gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="#"><span>✦</span> The Real Greek Cheffette</a>
+  <ul class="nav-links">
+    <li><a href="#recipes">Recipes</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="https://www.instagram.com/therealgrekcheffette" target="_blank">Instagram</a></li>
+  </ul>
+  <button class="nav-search-btn" id="searchBtn" aria-label="Search">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Authentic Greek Recipes</div>
+    <h1>The Real<br><em>Greek Cheffette</em></h1>
+    <p class="hero-sub">Heirloom recipes from my kitchen to yours — cooked with love, passed down through generations.</p>
+    <div class="hero-search">
+      <input type="text" id="heroSearchInput" placeholder="Search recipes…" autocomplete="off">
+      <button onclick="triggerHeroSearch()">Search</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── RECIPES ── -->
+<section class="section" id="recipes">
+  <div class="section-header">
+    <h2 class="section-title">From <em>My Kitchen</em></h2>
+  </div>
+  <div class="categories" id="categories"></div>
+  <div class="recipe-grid" id="recipeGrid"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── ABOUT ── -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap">
+      <div class="about-img-placeholder">👩‍🍳</div>
+      <div class="about-accent-box"></div>
+    </div>
+    <div class="about-text">
+      <p class="about-eyebrow">About the Cheffette</p>
+      <h2>This is the food<br>of my family and<br><em>my heritage.</em></h2>
+      <p>I'm a self-taught cook who grew up watching my mother and yiayia fill the kitchen with the aromas of oregano, olive oil, and slow-roasted lamb. The Real Greek Cheffette is my way of keeping those flavours alive — and sharing them with you.</p>
+      <p>Every recipe here is made with the same love, the same pinchy-pinch of seasoning, and the same belief that good food brings people together.</p>
+      <a class="btn btn-dark" href="https://www.instagram.com/therealgrekcheffette" target="_blank">
+        Follow Along ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTAGRAM ── -->
+<section class="instagram-strip">
+  <p class="eyebrow">Find me on Instagram</p>
+  <h2>Share the love —</h2>
+  <a href="https://www.instagram.com/therealgrekcheffette" target="_blank">@therealgrekcheffette</a>
+  <p>Tag me in your recreations and I'll reshare them!</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span>✦</span> The Real Greek Cheffette</div>
+    <ul class="footer-links">
+      <li><a href="#recipes">Recipes</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 The Real Greek Cheffette. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ── RECIPE MODAL ── -->
+<div class="modal-overlay" id="recipeModal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div id="modalImageWrap"></div>
+    <div class="modal-body">
+      <div class="modal-category" id="modalCategory"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-stats" id="modalStats"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-content-grid">
+        <div>
+          <h3 class="modal-section-title">Ingredients</h3>
+          <ul class="ingredients-list" id="modalIngredients"></ul>
+        </div>
+        <div>
+          <h3 class="modal-section-title">Instructions</h3>
+          <ol class="instructions-list" id="modalInstructions"></ol>
+        </div>
+      </div>
+      <div id="modalInstagram"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-overlay-inner">
+    <div class="search-overlay-bar">
+      <input type="text" id="searchInput" placeholder="Search recipes…" autocomplete="off">
+      <button class="search-close" id="searchClose">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script>
+/* ── DATA ── */
+const STORAGE_KEY = 'gck_recipes';
+
+/* ── STATE ── */
+let recipes = [];
+let activeCategory = 'All';
+let activeRecipe = null;
+
+/* ── LOAD ── */
+// Try data.json first (GitHub Pages / any web host), fall back to localStorage cache
+async function loadRecipes() {
+  try {
+    const resp = await fetch('./data.json?v=' + Date.now());
+    if (resp.ok) {
+      const data = await resp.json();
+      recipes = data.recipes || [];
+      // cache locally so offline/direct-file open still works
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(recipes));
+      return;
+    }
+  } catch (_) {}
+  // fallback: localStorage cache (works when opening the file directly)
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    try { recipes = JSON.parse(stored); return; } catch (_) {}
+  }
+  recipes = [];
+}
+
+/* ── RENDER ── */
+function renderCategories() {
+  const container = document.getElementById('categories');
+  const available = ['All', ...new Set(recipes.map(r => r.category))];
+  container.innerHTML = available.map(cat => `
+    <button class="cat-pill ${cat === activeCategory ? 'active' : ''}"
+      onclick="setCategory('${cat}')">${cat}</button>
+  `).join('');
+}
+
+function renderGrid() {
+  const grid = document.getElementById('recipeGrid');
+  let filtered = activeCategory === 'All'
+    ? recipes
+    : recipes.filter(r => r.category === activeCategory);
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty-state">
+      <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" opacity="0.3">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 17v-2M12 7v6"/>
+      </svg>
+      <p>No recipes in this category yet.</p>
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(r => `
+    <article class="recipe-card" onclick="openRecipe('${r.id}')">
+      ${r.image
+        ? `<img class="recipe-card-img" src="${escHtml(r.image)}" alt="${escHtml(r.title)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+        : ''
+      }
+      <div class="recipe-card-img-placeholder" style="display:${r.image ? 'none' : 'flex'}">🫒</div>
+      <div class="recipe-card-body">
+        <div class="recipe-card-meta">
+          <span class="recipe-category">${escHtml(r.category)}</span>
+          ${r.featured ? '<span class="recipe-featured-badge">Featured</span>' : ''}
+        </div>
+        <h3>${escHtml(r.title)}</h3>
+        <p class="recipe-card-desc">${escHtml(r.description)}</p>
+        <div class="recipe-card-footer">
+          ${r.prepTime ? `<span class="recipe-stat">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+            Prep ${escHtml(r.prepTime)}
+          </span>` : ''}
+          ${r.cookTime && r.cookTime !== '0 min' ? `<span class="recipe-stat">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+            Cook ${escHtml(r.cookTime)}
+          </span>` : ''}
+          ${r.serves ? `<span class="recipe-stat">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+            Serves ${escHtml(r.serves)}
+          </span>` : ''}
+        </div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function setCategory(cat) {
+  activeCategory = cat;
+  renderCategories();
+  renderGrid();
+}
+
+/* ── MODAL ── */
+function openRecipe(id) {
+  const recipe = recipes.find(r => r.id === id);
+  if (!recipe) return;
+  activeRecipe = recipe;
+
+  const imgWrap = document.getElementById('modalImageWrap');
+  if (recipe.image) {
+    imgWrap.innerHTML = `<img class="modal-hero-img" src="${escHtml(recipe.image)}" alt="${escHtml(recipe.title)}" onerror="this.outerHTML='<div class=\\'modal-hero-placeholder\\'>🫒</div>'">`;
+  } else {
+    imgWrap.innerHTML = `<div class="modal-hero-placeholder">🫒</div>`;
+  }
+
+  document.getElementById('modalCategory').textContent = recipe.category;
+  document.getElementById('modalTitle').textContent = recipe.title;
+  document.getElementById('modalDesc').textContent = recipe.description;
+
+  const stats = document.getElementById('modalStats');
+  stats.innerHTML = [
+    recipe.prepTime ? `<div class="modal-stat"><span class="modal-stat-label">Prep Time</span><span class="modal-stat-value">${escHtml(recipe.prepTime)}</span></div>` : '',
+    recipe.cookTime ? `<div class="modal-stat"><span class="modal-stat-label">Cook Time</span><span class="modal-stat-value">${escHtml(recipe.cookTime)}</span></div>` : '',
+    recipe.serves ? `<div class="modal-stat"><span class="modal-stat-label">Serves</span><span class="modal-stat-value">${escHtml(recipe.serves)}</span></div>` : '',
+  ].join('');
+
+  const ingList = document.getElementById('modalIngredients');
+  ingList.innerHTML = (recipe.ingredients || []).map(i => `<li>${escHtml(i)}</li>`).join('');
+
+  const instList = document.getElementById('modalInstructions');
+  instList.innerHTML = (recipe.instructions || []).map(i => `<li>${escHtml(i)}</li>`).join('');
+
+  const igWrap = document.getElementById('modalInstagram');
+  if (recipe.instagram) {
+    igWrap.innerHTML = `
+      <a class="modal-instagram" href="${escHtml(recipe.instagram)}" target="_blank" rel="noopener">
+        <div class="modal-instagram-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4" stroke="white" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+          </svg>
+        </div>
+        <div class="modal-instagram-text">
+          <strong>Watch this recipe on Instagram</strong>
+          <span>See the full video reel ↗</span>
+        </div>
+      </a>`;
+  } else {
+    igWrap.innerHTML = '';
+  }
+
+  document.getElementById('recipeModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('recipeModal').classList.remove('open');
+  document.body.style.overflow = '';
+  activeRecipe = null;
+}
+
+/* ── SEARCH ── */
+function openSearch() {
+  document.getElementById('searchOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('searchInput').focus(), 50);
+}
+function closeSearch() {
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('searchInput').value = '';
+  document.getElementById('searchResults').innerHTML = '';
+}
+
+function renderSearchResults(query) {
+  const container = document.getElementById('searchResults');
+  if (!query.trim()) { container.innerHTML = ''; return; }
+  const q = query.toLowerCase();
+  const results = recipes.filter(r =>
+    r.title.toLowerCase().includes(q) ||
+    r.description.toLowerCase().includes(q) ||
+    r.category.toLowerCase().includes(q)
+  );
+  if (results.length === 0) {
+    container.innerHTML = `<p style="color:var(--text-light);font-size:14px;padding:12px">No recipes found for "${escHtml(query)}"</p>`;
+    return;
+  }
+  container.innerHTML = results.map(r => `
+    <div class="search-result-item" onclick="closeSearch();openRecipe('${r.id}')">
+      ${r.image
+        ? `<img class="search-result-img" src="${escHtml(r.image)}" alt="" onerror="this.style.display='none'">`
+        : `<div class="search-result-img-ph">🫒</div>`
+      }
+      <div>
+        <div class="search-result-title">${escHtml(r.title)}</div>
+        <div class="search-result-cat">${escHtml(r.category)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function triggerHeroSearch() {
+  const val = document.getElementById('heroSearchInput').value;
+  if (!val.trim()) return;
+  closeModal();
+  document.getElementById('searchInput').value = val;
+  openSearch();
+  renderSearchResults(val);
+}
+
+/* ── UTIL ── */
+function escHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+/* ── EVENTS ── */
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('recipeModal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.getElementById('searchBtn').addEventListener('click', openSearch);
+document.getElementById('searchClose').addEventListener('click', closeSearch);
+document.getElementById('searchOverlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeSearch();
+});
+document.getElementById('searchInput').addEventListener('input', e => {
+  renderSearchResults(e.target.value);
+});
+document.getElementById('heroSearchInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') triggerHeroSearch();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeModal(); closeSearch(); }
+});
+
+/* ── INIT ── */
+loadRecipes().then(() => {
+  renderCategories();
+  renderGrid();
+});
+</script>
+</body>
+</html>

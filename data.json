@@ -1,0 +1,198 @@
+{
+  "recipes": [
+    {
+      "id": "r1",
+      "title": "Classic Horiatiki (Greek Village Salad)",
+      "category": "Salads",
+      "description": "The authentic Greek village salad — no lettuce, just sun-ripened tomatoes, crisp cucumber, Kalamata olives, and a generous slab of feta. Simple, honest, perfect.",
+      "image": "",
+      "instagram": "",
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "serves": "4",
+      "featured": true,
+      "ingredients": [
+        "4 large ripe tomatoes, cut into wedges",
+        "1 large cucumber, halved and thickly sliced",
+        "1 green pepper, sliced into rings",
+        "1 small red onion, thinly sliced",
+        "½ cup Kalamata olives",
+        "200g block of feta cheese",
+        "4 tbsp extra virgin olive oil",
+        "1 tsp dried Greek oregano",
+        "Sea salt and freshly ground black pepper"
+      ],
+      "instructions": [
+        "Arrange the tomato wedges, cucumber, green pepper, and red onion in a large shallow bowl or plate.",
+        "Scatter the Kalamata olives over the vegetables.",
+        "Place the whole block of feta on top — do not crumble it. This is the authentic Greek way.",
+        "Drizzle generously with high-quality extra virgin olive oil.",
+        "Sprinkle with dried oregano, sea salt, and black pepper.",
+        "Serve immediately with thick crusty bread to mop up the juices."
+      ],
+      "createdAt": "2025-01-01T10:00:00Z"
+    },
+    {
+      "id": "r2",
+      "title": "Spanakopita (Spinach & Feta Pie)",
+      "category": "Mezze",
+      "description": "Golden, shattering layers of phyllo wrapped around a fragrant filling of spinach, feta, fresh dill, and egg. This is the pie my yiayia made every Sunday without fail.",
+      "image": "",
+      "instagram": "",
+      "prepTime": "30 min",
+      "cookTime": "45 min",
+      "serves": "8",
+      "featured": false,
+      "ingredients": [
+        "500g fresh spinach, or frozen thawed and squeezed completely dry",
+        "400g feta cheese, crumbled",
+        "2 large eggs, lightly beaten",
+        "1 bunch fresh dill, roughly chopped",
+        "4 spring onions, finely sliced",
+        "2 tbsp extra virgin olive oil, plus more for brushing",
+        "10 sheets phyllo pastry, thawed if frozen",
+        "½ tsp freshly grated nutmeg",
+        "Salt and freshly ground pepper"
+      ],
+      "instructions": [
+        "Preheat your oven to 180°C (350°F). If using fresh spinach, wilt in a dry pan, then transfer to a colander and squeeze out every drop of moisture with your hands.",
+        "In a large bowl, combine the spinach, crumbled feta, beaten eggs, dill, spring onions, olive oil, and nutmeg. Season with pepper — the feta is salty so be careful with salt.",
+        "Brush a 30×20cm baking dish generously with olive oil.",
+        "Layer 5 sheets of phyllo in the dish, brushing each sheet with olive oil before laying the next.",
+        "Spread the spinach filling evenly over the phyllo base.",
+        "Layer the remaining 5 sheets on top, brushing each with olive oil.",
+        "Using a sharp knife, score the top layers into squares or diamonds — this makes it easier to cut after baking.",
+        "Bake for 40–45 minutes until deeply golden and crispy. Cool for 10 minutes before serving."
+      ],
+      "createdAt": "2025-01-02T10:00:00Z"
+    },
+    {
+      "id": "r3",
+      "title": "Slow-Roasted Lamb with Lemon Potatoes",
+      "category": "Mains",
+      "description": "Tender, fall-off-the-bone lamb shoulder slow-roasted over a bed of potatoes bathed in lemon juice and olive oil. This is Easter Sunday on a platter.",
+      "image": "",
+      "instagram": "",
+      "prepTime": "20 min",
+      "cookTime": "4 hours",
+      "serves": "6",
+      "featured": true,
+      "ingredients": [
+        "2kg bone-in lamb shoulder",
+        "1kg floury potatoes, peeled and cut into large wedges",
+        "6 garlic cloves — 4 sliced, 2 minced",
+        "Juice of 3 lemons",
+        "80ml extra virgin olive oil",
+        "1 tbsp dried oregano",
+        "1 tsp dried rosemary",
+        "250ml white wine or chicken stock",
+        "Salt and black pepper"
+      ],
+      "instructions": [
+        "Preheat the oven to 200°C (400°F). Using a small knife, make deep cuts all over the lamb and push in the sliced garlic.",
+        "Mix the minced garlic, half the lemon juice, half the olive oil, oregano, rosemary, salt, and pepper into a paste and rub all over the lamb.",
+        "Toss the potato wedges with the remaining lemon juice, olive oil, salt, and pepper. Spread in a large deep roasting tin.",
+        "Place the lamb on top of the potatoes. Pour the wine or stock into the bottom of the tin.",
+        "Roast uncovered for 30 minutes until the lamb starts to colour, then cover tightly with foil.",
+        "Reduce heat to 160°C (320°F) and slow-roast for 3–3.5 hours until the lamb is completely tender and falls away from the bone.",
+        "Remove the foil for the last 20 minutes to let the potatoes crisp up.",
+        "Rest for 15 minutes before serving. Spoon the pan juices generously over everything."
+      ],
+      "createdAt": "2025-01-03T10:00:00Z"
+    },
+    {
+      "id": "r4",
+      "title": "Avgolemono (Greek Egg & Lemon Soup)",
+      "category": "Soups",
+      "description": "A silky, warming soup made with chicken broth, rice, eggs, and lemon. My family's remedy for every cold, every bad day, every homecoming. Pure comfort.",
+      "image": "",
+      "instagram": "",
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "serves": "4",
+      "featured": false,
+      "ingredients": [
+        "1.5 litres good quality chicken stock",
+        "80g long-grain white rice",
+        "3 large eggs",
+        "Juice of 2 lemons (about 60ml)",
+        "Salt and white pepper",
+        "Fresh dill to serve"
+      ],
+      "instructions": [
+        "Bring the chicken stock to a gentle boil in a large saucepan. Add the rice and cook for 15–18 minutes until very tender.",
+        "In a bowl, whisk the eggs until frothy, about 2 minutes. Add the lemon juice and continue whisking.",
+        "Slowly ladle about 2 cups of the hot broth into the egg mixture, whisking constantly — this tempers the eggs so they don't scramble.",
+        "Pour the tempered egg mixture back into the pot, stirring gently. Keep the heat on very low — do not boil.",
+        "Season with salt and white pepper. The soup will thicken as it heats.",
+        "Serve immediately, topped with a little fresh dill and an extra squeeze of lemon if you like."
+      ],
+      "createdAt": "2025-01-04T10:00:00Z"
+    },
+    {
+      "id": "r5",
+      "title": "Tzatziki",
+      "category": "Mezze",
+      "description": "Thick, cool, and garlicky — proper Greek tzatziki made with strained yoghurt, cucumber, and fresh dill. The dip that goes with absolutely everything.",
+      "image": "",
+      "instagram": "",
+      "prepTime": "15 min",
+      "cookTime": "0 min",
+      "serves": "6",
+      "featured": false,
+      "ingredients": [
+        "500g full-fat Greek yoghurt (strained)",
+        "1 large cucumber",
+        "3 cloves garlic, minced or grated",
+        "3 tbsp extra virgin olive oil",
+        "1 tbsp red wine vinegar",
+        "Small bunch of fresh dill, finely chopped",
+        "Salt and pepper to taste",
+        "Drizzle of olive oil and pinch of paprika to serve"
+      ],
+      "instructions": [
+        "Grate the cucumber coarsely. Place in a clean tea towel or muslin cloth and squeeze firmly to remove all the water — this is the most important step.",
+        "In a bowl, combine the strained yoghurt, grated cucumber, garlic, olive oil, and vinegar.",
+        "Stir in the fresh dill and season generously with salt and pepper.",
+        "Taste and adjust — add more garlic if you love it strong, more lemon for brightness.",
+        "Cover and refrigerate for at least 30 minutes for the flavours to develop.",
+        "Serve drizzled with olive oil and a pinch of paprika, with warm pitta or crudités."
+      ],
+      "createdAt": "2025-01-05T10:00:00Z"
+    },
+    {
+      "id": "r6",
+      "title": "Baklava",
+      "category": "Desserts",
+      "description": "Layers of buttery phyllo, crushed walnuts and pistachios, spiced with cinnamon and clove, soaked in honey syrup. Every bite is an occasion.",
+      "image": "",
+      "instagram": "",
+      "prepTime": "40 min",
+      "cookTime": "50 min",
+      "serves": "24",
+      "featured": false,
+      "ingredients": [
+        "450g phyllo pastry, thawed",
+        "200g unsalted butter, melted",
+        "300g walnuts, roughly chopped",
+        "100g pistachios, roughly chopped",
+        "1 tsp ground cinnamon",
+        "¼ tsp ground cloves",
+        "2 tbsp sugar",
+        "For the syrup: 300g sugar, 200ml water, 150g honey, 1 cinnamon stick, strip of lemon peel"
+      ],
+      "instructions": [
+        "Make the syrup first: combine the sugar, water, honey, cinnamon stick, and lemon peel in a saucepan. Bring to a boil, stir to dissolve the sugar, then simmer for 10 minutes. Cool completely.",
+        "Preheat oven to 180°C (350°F). Mix the chopped nuts with cinnamon, cloves, and sugar.",
+        "Brush a 30×20cm baking dish with melted butter. Layer 8 sheets of phyllo, brushing each generously with butter.",
+        "Spread a third of the nut mixture over the phyllo.",
+        "Continue layering — 4 sheets phyllo + nut mixture — twice more.",
+        "Finish with the remaining phyllo sheets on top, buttering every layer.",
+        "Before baking, cut the baklava into diamonds or squares with a very sharp knife.",
+        "Bake for 45–50 minutes until deep golden and crispy.",
+        "As soon as it comes out of the oven, pour the cold syrup over the hot baklava. This creates the perfect soak. Leave to absorb for at least 4 hours before serving."
+      ],
+      "createdAt": "2025-01-06T10:00:00Z"
+    }
+  ]
+}
